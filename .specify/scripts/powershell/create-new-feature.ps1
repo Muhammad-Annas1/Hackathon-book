@@ -1,5 +1,6 @@
 #!/usr/bin/env pwsh
 # Create a new feature
+Write-Host ($MyInvocation | Out-String)
 [CmdletBinding()]
 param(
     [switch]$Json,
