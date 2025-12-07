@@ -1,6 +1,5 @@
 #!/usr/bin/env pwsh
 # Create a new feature
-Write-Host ($MyInvocation | Out-String)
 [CmdletBinding()]
 param(
     [switch]$Json,
@@ -11,7 +10,7 @@ param(
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$FeatureDescription
 )
-
+Write-Host ($MyInvocation | Out-String)
 $ErrorActionPreference = 'Stop'
 
 # Show help if requested
