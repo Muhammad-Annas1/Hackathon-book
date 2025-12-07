@@ -1,0 +1,17 @@
+Module 1: The Robotic Nervous System (ROS 2)
+Target audience: Students learning Physical AI and humanoid robotics.
+Focus: ROS 2 middleware, rclpy control, and URDF for humanoids.
+Chapters (3–4):
+1. ROS 2 Nodes, Topics, Services
+2. Controlling robots with rclpy (Python -> ROS bridge)
+3. URDF fundamentals for humanoid robots
+4. (Optional) Simple humanoid joint control project
+Success criteria:
+- Accurate ROS 2 concepts and runnable examples
+- Valid rclpy scripts and URDF files
+- Docusaurus-ready markdown
+Constraints:
+- ROS 2 Humble+ compatibility
+- Use only ROS 2 concepts (no Gazebo/Isaac/Unity)
+Not building:
+- Full navigation, SLAM, or simulation features
