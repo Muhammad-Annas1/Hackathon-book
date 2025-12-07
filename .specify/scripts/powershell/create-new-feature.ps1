@@ -6,16 +6,14 @@ param(
     [string]$ShortName,
     [int]$Number = 0,
     [switch]$Help,
-    [string]$DescriptionFile,
-    [Parameter(ValueFromRemainingArguments = $true)]
-    [string[]]$FeatureDescription
+    [string]$DescriptionFile
 )
 Write-Host ($MyInvocation | Out-String)
 $ErrorActionPreference = 'Stop'
 
 # Show help if requested
 if ($Help) {
-    Write-Host "Usage: ./create-new-feature.ps1 [-Json] [-ShortName <name>] [-Number N] [-DescriptionFile <path>] <feature description>"
+    Write-Host "Usage: ./create-new-feature.ps1 [-Json] [-ShortName <name>] [-Number N] [-DescriptionFile <path>]"
     Write-Host ""
     Write-Host "Options:"
     Write-Host "  -Json               Output in JSON format"
@@ -25,8 +23,7 @@ if ($Help) {
     Write-Host "  -Help               Show this help message"
     Write-Host ""
     Write-Host "Examples:"
-    Write-Host "  ./create-new-feature.ps1 'Add user authentication system' -ShortName 'user-auth'"
-    Write-Host "  ./create-new-feature.ps1 -DescriptionFile ./desc.txt"
+    Write-Host "  ./create-new-feature.ps1 -ShortName 'user-auth' -DescriptionFile ./desc.txt"
     exit 0
 }
 
@@ -34,12 +31,9 @@ if ($Help) {
 if ($DescriptionFile) {
     $featureDesc = Get-Content -Path $DescriptionFile -Raw
 }
-elseif (-not $FeatureDescription -or $FeatureDescription.Count -eq 0) {
-    Write-Error "Usage: ./create-new-feature.ps1 [-Json] [-ShortName <name>] <feature description>"
-    exit 1
-}
 else {
-    $featureDesc = ($FeatureDescription -join ' ').Trim()
+    Write-Error "Usage: ./create-new-feature.ps1 [-Json] [-ShortName <name>] [-DescriptionFile <path>]"
+    exit 1
 }
 
 # Resolve repository root. Prefer git information when available, but fall back
