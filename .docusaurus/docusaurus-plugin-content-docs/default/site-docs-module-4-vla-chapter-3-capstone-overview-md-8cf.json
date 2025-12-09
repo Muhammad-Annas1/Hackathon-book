@@ -1,0 +1,22 @@
+{
+  "id": "module-4-vla/chapter-3-capstone-overview",
+  "title": "Chapter 3: Capstone Overview",
+  "description": "This chapter provides a high-level overview of how the concepts from the previous chapters—voice-to-action and cognitive planning—come together in a complete, autonomous humanoid robotics workflow. This is the \"capstone\" view that illustrates the full end-to-end system.",
+  "source": "@site/docs/module-4-vla/chapter-3-capstone-overview.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/chapter-3-capstone-overview",
+  "permalink": "/docs/module-4-vla/chapter-3-capstone-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-4-vla/chapter-3-capstone-overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3: Capstone Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Cognitive Planning",
+    "permalink": "/docs/module-4-vla/chapter-2-cognitive-planning"
+  }
+}

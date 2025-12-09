@@ -1,0 +1,24 @@
+{
+  "id": "module-2/chapter-1-gazebo-physics",
+  "title": "Chapter 1: Gazebo Physics",
+  "description": "This chapter covers the fundamental concepts of physics simulation within Gazebo.",
+  "source": "@site/docs/module-2/chapter-1-gazebo-physics.md",
+  "sourceDirName": "module-2",
+  "slug": "/module-2/chapter-1-gazebo-physics",
+  "permalink": "/docs/module-2/chapter-1-gazebo-physics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-2/chapter-1-gazebo-physics.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Simple Humanoid Joint Control Project",
+    "permalink": "/docs/module-1/chapter-4-joint-control-project"
+  },
+  "next": {
+    "title": "Chapter 1: Gazebo Physics",
+    "permalink": "/docs/module-2/chapter-1-gazebo-physics"
+  }
+}

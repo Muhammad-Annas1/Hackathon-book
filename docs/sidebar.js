@@ -1,5 +1,5 @@
 module.exports = {
-  tutorialSidebar: [
+  tutorialSidebar: ['intro',
     {
       type: 'category',
       label: 'Module 1: ROS 2 Fundamentals',
@@ -31,6 +31,16 @@ module.exports = {
         'module-3-isaac/chapter-3-nav2-humanoid-planning',
         // Optional chapter, will be uncommented if implemented
         // 'module-3-isaac/chapter-4-isaac-sim-ros-workflow',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Module 4: Vision-Language-Action',
+      link: { type: 'doc', id: 'module-4-vla/chapter-1-voice-to-action' },
+      items: [
+        'module-4-vla/chapter-1-voice-to-action',
+        'module-4-vla/chapter-2-cognitive-planning',
+        'module-4-vla/chapter-3-capstone-overview',
       ],
     },
   ],

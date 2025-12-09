@@ -1,0 +1,24 @@
+{
+  "id": "module-3-isaac/chapter-1-isaac-sim-fundamentals",
+  "title": "Chapter 1: Isaac Sim Fundamentals",
+  "description": "1.1 Introduction to Isaac Sim",
+  "source": "@site/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/chapter-1-isaac-sim-fundamentals",
+  "permalink": "/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3: Sensor Simulation",
+    "permalink": "/docs/module-2/chapter-3-sensor-simulation"
+  },
+  "next": {
+    "title": "Chapter 1: Isaac Sim Fundamentals",
+    "permalink": "/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals"
+  }
+}

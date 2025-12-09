@@ -1,0 +1,24 @@
+{
+  "id": "module-2/chapter-3-sensor-simulation",
+  "title": "Chapter 3: Sensor Simulation",
+  "description": "Simulating robot sensors is crucial for developing and testing perception and control algorithms without the need for expensive physical hardware. This chapter covers the principles behind simulating common sensors like LiDAR, Depth Cameras, and IMUs.",
+  "source": "@site/docs/module-2/chapter-3-sensor-simulation.md",
+  "sourceDirName": "module-2",
+  "slug": "/module-2/chapter-3-sensor-simulation",
+  "permalink": "/docs/module-2/chapter-3-sensor-simulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-2/chapter-3-sensor-simulation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Building a Unity Digital Twin",
+    "permalink": "/docs/module-2/chapter-2-unity-digital-twin"
+  },
+  "next": {
+    "title": "Chapter 1: Isaac Sim Fundamentals",
+    "permalink": "/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "module-1/chapter-4-joint-control-project",
+  "title": "Chapter 4: Simple Humanoid Joint Control Project",
+  "description": "This project brings together all the concepts from the previous chapters to create a simple joint control project for our humanoid robot.",
+  "source": "@site/docs/module-1/chapter-4-joint-control-project.md",
+  "sourceDirName": "module-1",
+  "slug": "/module-1/chapter-4-joint-control-project",
+  "permalink": "/docs/module-1/chapter-4-joint-control-project",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-1/chapter-4-joint-control-project.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3: URDF Fundamentals",
+    "permalink": "/docs/module-1/chapter-3-urdf-fundamentals"
+  },
+  "next": {
+    "title": "Chapter 1: Gazebo Physics",
+    "permalink": "/docs/module-2/chapter-1-gazebo-physics"
+  }
+}

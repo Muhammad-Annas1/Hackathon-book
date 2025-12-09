@@ -1,0 +1,26 @@
+{
+  "id": "module-4-vla/chapter-1-voice-to-action",
+  "title": "Chapter 1: Voice-to-Action",
+  "description": "This chapter explores the fundamental concepts behind converting a spoken command into a robotic action. This voice-to-action pipeline is a cornerstone of modern human-robot interaction, enabling intuitive control of complex systems.",
+  "source": "@site/docs/module-4-vla/chapter-1-voice-to-action.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/chapter-1-voice-to-action",
+  "permalink": "/docs/module-4-vla/chapter-1-voice-to-action",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-4-vla/chapter-1-voice-to-action.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 1: Voice-to-Action"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3: Nav2 Path Planning for Humanoids",
+    "permalink": "/docs/module-3-isaac/chapter-3-nav2-humanoid-planning"
+  },
+  "next": {
+    "title": "Chapter 1: Voice-to-Action",
+    "permalink": "/docs/module-4-vla/chapter-1-voice-to-action"
+  }
+}

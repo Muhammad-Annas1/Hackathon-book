@@ -1,0 +1,24 @@
+{
+  "id": "module-3-isaac/chapter-3-nav2-humanoid-planning",
+  "title": "Chapter 3: Nav2 Path Planning for Humanoids",
+  "description": "3.1 Introduction to Nav2",
+  "source": "@site/docs/module-3-isaac/chapter-3-nav2-humanoid-planning.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/chapter-3-nav2-humanoid-planning",
+  "permalink": "/docs/module-3-isaac/chapter-3-nav2-humanoid-planning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-3-isaac/chapter-3-nav2-humanoid-planning.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Isaac ROS VSLAM + Perception",
+    "permalink": "/docs/module-3-isaac/chapter-2-isaac-ros-vslam-perception"
+  },
+  "next": {
+    "title": "Chapter 1: Voice-to-Action",
+    "permalink": "/docs/module-4-vla/chapter-1-voice-to-action"
+  }
+}

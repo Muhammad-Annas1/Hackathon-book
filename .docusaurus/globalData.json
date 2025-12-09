@@ -1,0 +1,102 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/chapter-1-core-concepts",
+              "path": "/docs/module-1/chapter-1-core-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/chapter-2-rclpy-control",
+              "path": "/docs/module-1/chapter-2-rclpy-control",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/chapter-3-urdf-fundamentals",
+              "path": "/docs/module-1/chapter-3-urdf-fundamentals",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/chapter-4-joint-control-project",
+              "path": "/docs/module-1/chapter-4-joint-control-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/chapter-1-gazebo-physics",
+              "path": "/docs/module-2/chapter-1-gazebo-physics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/chapter-2-unity-digital-twin",
+              "path": "/docs/module-2/chapter-2-unity-digital-twin",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/chapter-3-sensor-simulation",
+              "path": "/docs/module-2/chapter-3-sensor-simulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/chapter-1-isaac-sim-fundamentals",
+              "path": "/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/chapter-2-isaac-ros-vslam-perception",
+              "path": "/docs/module-3-isaac/chapter-2-isaac-ros-vslam-perception",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/chapter-3-nav2-humanoid-planning",
+              "path": "/docs/module-3-isaac/chapter-3-nav2-humanoid-planning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/chapter-4-isaac-sim-ros-workflow",
+              "path": "/docs/module-3-isaac/chapter-4-isaac-sim-ros-workflow"
+            },
+            {
+              "id": "module-4-vla/chapter-1-voice-to-action",
+              "path": "/docs/module-4-vla/chapter-1-voice-to-action",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/chapter-2-cognitive-planning",
+              "path": "/docs/module-4-vla/chapter-2-cognitive-planning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/chapter-3-capstone-overview",
+              "path": "/docs/module-4-vla/chapter-3-capstone-overview",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

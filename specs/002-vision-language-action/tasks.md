@@ -15,8 +15,8 @@
 
 **Purpose**: Prepare the Docusaurus environment for the new module.
 
-- [ ] T001 Create directory `docs/module-4-vla/` for the new module's content.
-- [ ] T002 [P] In `docusaurus.config.js`, add `'xml'` to the `prism.additionalLanguages` array to ensure URDF/launch files are highlighted.
+- [x] T001 Create directory `docs/module-4-vla/` for the new module's content.
+- [x] T002 [P] In `docusaurus.config.js`, add `'xml'` to the `prism.additionalLanguages` array to ensure URDF/launch files are highlighted.
 
 ---
 
@@ -26,10 +26,10 @@
 
 **⚠️ CRITICAL**: No chapter writing can begin until this phase is complete.
 
-- [ ] T003 [P] Create placeholder file `docs/module-4-vla/chapter-1-voice-to-action.md` with a title frontmatter.
-- [ ] T004 [P] Create placeholder file `docs/module-4-vla/chapter-2-cognitive-planning.md` with a title frontmatter.
-- [ ] T005 [P] Create placeholder file `docs/module-4-vla/chapter-3-capstone-overview.md` with a title frontmatter.
-- [ ] T006 Update `docs/sidebar.js` to add a new category for "Module 4: Vision-Language-Action" with entries for the three new chapters.
+- [x] T003 [P] Create placeholder file `docs/module-4-vla/chapter-1-voice-to-action.md` with a title frontmatter.
+- [x] T004 [P] Create placeholder file `docs/module-4-vla/chapter-2-cognitive-planning.md` with a title frontmatter.
+- [x] T005 [P] Create placeholder file `docs/module-4-vla/chapter-3-capstone-overview.md` with a title frontmatter.
+- [x] T006 Update `docs/sidebar.js` to add a new category for "Module 4: Vision-Language-Action" with entries for the three new chapters.
 
 **Checkpoint**: Foundation ready - chapter writing can now begin. The new module should appear in the sidebar navigation, linking to empty pages.
 
@@ -43,9 +43,9 @@
 
 ### Implementation for User Story 1
 
-- [ ] T007 [US1] Write the core explanatory content for the Whisper-to-ROS 2 pipeline in `docs/module-4-vla/chapter-1-voice-to-action.md`.
-- [ ] T008 [US1] Create and embed a diagram or pseudo-code in `docs/module-4-vla/chapter-1-voice-to-action.md` illustrating the data flow from a voice command to a ROS 2 intent.
-- [ ] T009 [US1] Add at least two clear examples of ROS 2 action breakdowns in `docs/module-4-vla/chapter-1-voice-to-action.md`.
+- [x] T007 [US1] Write the core explanatory content for the Whisper-to-ROS 2 pipeline in `docs/module-4-vla/chapter-1-voice-to-action.md`.
+- [x] T008 [US1] Create and embed a diagram or pseudo-code in `docs/module-4-vla/chapter-1-voice-to-action.md` illustrating the data flow from a voice command to a ROS 2 intent.
+- [x] T009 [US1] Add at least two clear examples of ROS 2 action breakdowns in `docs/module-4-vla/chapter-1-voice-to-action.md`.
 
 **Checkpoint**: User Story 1 is complete. The "Voice-to-Action" chapter is fully drafted and meets the requirements of the spec.
 
@@ -59,8 +59,8 @@
 
 ### Implementation for User Story 2
 
-- [ ] T010 [US2] Write the core explanatory content for LLM-based cognitive planning in `docs/module-4-vla/chapter-2-cognitive-planning.md`.
-- [ ] T011 [US2] Create and embed an example of a high-level task prompt and its corresponding LLM-generated action sequence output in `docs/module-4-vla/chapter-2-cognitive-planning.md`.
+- [x] T010 [US2] Write the core explanatory content for LLM-based cognitive planning in `docs/module-4-vla/chapter-2-cognitive-planning.md`.
+- [x] T011 [US2] Create and embed an example of a high-level task prompt and its corresponding LLM-generated action sequence output in `docs/module-4-vla/chapter-2-cognitive-planning.md`.
 
 **Checkpoint**: User Story 2 is complete. The "Cognitive Planning" chapter is fully drafted.
 
@@ -74,8 +74,8 @@
 
 ### Implementation for User Story 3
 
-- [ ] T012 [US3] Write the high-level overview of the full autonomous humanoid workflow in `docs/module-4-vla/chapter-3-capstone-overview.md`.
-- [ ] T013 [US3] Create and embed a system architecture block diagram in `docs/module-4-vla/chapter-3-capstone-overview.md` showing the interactions between voice, planning, and action.
+- [x] T012 [US3] Write the high-level overview of the full autonomous humanoid workflow in `docs/module-4-vla/chapter-3-capstone-overview.md`.
+- [x] T013 [US3] Create and embed a system architecture block diagram in `docs/module-4-vla/chapter-3-capstone-overview.md` showing the interactions between voice, planning, and action.
 
 **Checkpoint**: All user stories are implemented. All new chapters are drafted.
 
@@ -86,9 +86,9 @@
 **Purpose**: Final review and validation of the new module.
 
 - [ ] T014 [P] Review all content in `docs/module-4-vla/` for technical accuracy, clarity, grammar, and style consistency.
-- [ ] T015 Run a full Docusaurus build (`yarn build`) to ensure there are no errors.
-- [ ] T016 Manually verify that all new chapters render correctly in the browser and that all internal links work.
-- [ ] T017 Validate that all code blocks in the new chapters are correctly formatted and highlighted.
+- [x] T015 Run a full Docusaurus build (`yarn build`) to ensure there are no errors.
+- [x] T016 Manually verify that all new chapters render correctly in the browser and that all internal links work.
+- [x] T017 Validate that all code blocks in the new chapters are correctly formatted and highlighted.
 
 ---
 

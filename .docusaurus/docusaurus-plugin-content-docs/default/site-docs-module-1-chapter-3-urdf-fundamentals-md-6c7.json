@@ -1,0 +1,24 @@
+{
+  "id": "module-1/chapter-3-urdf-fundamentals",
+  "title": "Chapter 3: URDF Fundamentals",
+  "description": "The Unified Robot Description Format (URDF) is an XML format used in ROS to describe all elements of a robot model. This includes the robot's links, joints, sensors, and their physical properties.",
+  "source": "@site/docs/module-1/chapter-3-urdf-fundamentals.md",
+  "sourceDirName": "module-1",
+  "slug": "/module-1/chapter-3-urdf-fundamentals",
+  "permalink": "/docs/module-1/chapter-3-urdf-fundamentals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-1/chapter-3-urdf-fundamentals.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Controlling Robots with rclpy",
+    "permalink": "/docs/module-1/chapter-2-rclpy-control"
+  },
+  "next": {
+    "title": "Chapter 4: Simple Humanoid Joint Control Project",
+    "permalink": "/docs/module-1/chapter-4-joint-control-project"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "module-3-isaac/chapter-4-isaac-sim-ros-workflow",
+  "title": "Chapter 4: Isaac Sim → Isaac ROS Workflow",
+  "description": "4.1 Introduction to Isaac Sim and Isaac ROS Integration",
+  "source": "@site/docs/module-3-isaac/chapter-4-isaac-sim-ros-workflow.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/chapter-4-isaac-sim-ros-workflow",
+  "permalink": "/docs/module-3-isaac/chapter-4-isaac-sim-ros-workflow",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-3-isaac/chapter-4-isaac-sim-ros-workflow.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}
