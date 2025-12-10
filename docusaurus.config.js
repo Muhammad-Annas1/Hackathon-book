@@ -60,7 +60,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics', // Replace with project repo
+            href: 'https://github.com/Muhammad-Annas1/Hackathon-book', // Replace with project repo
             label: 'GitHub',
             position: 'right',
           },
@@ -96,12 +96,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics', // Replace with project repo
+                href: 'https://github.com/Muhammad-Annas1/Hackathon-book', // Replace with project repo
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

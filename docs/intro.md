@@ -26,4 +26,4 @@ Every chapter is written in a beginner-friendly and project-focused style.
 
 ---
 
-### ⭐ Start your journey into Physical AI today!
+## ⭐ Start your journey into Physical AI today!

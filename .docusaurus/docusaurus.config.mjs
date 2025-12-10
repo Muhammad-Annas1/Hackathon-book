@@ -44,7 +44,7 @@ export default {
           "label": "Book"
         },
         {
-          "href": "https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics",
+          "href": "https://github.com/Muhammad-Annas1/Hackathon-book",
           "label": "GitHub",
           "position": "right"
         }
@@ -81,12 +81,12 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics"
+              "href": "https://github.com/Muhammad-Annas1/Hackathon-book"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2025 My Project, Inc. Built with Docusaurus."
+      "copyright": "Copyright © 2025 Physical AI & Humanoid Robotics, Inc. Built with Docusaurus."
     },
     "prism": {
       "theme": {
