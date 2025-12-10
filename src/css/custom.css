@@ -1,1 +1,83 @@
-/* Custom CSS goes here */
+/**
+ * Any CSS you add here will be applied to all pages of your Docusaurus site.
+ */
+
+/* Variables for colors */
+:root {
+  --ifm-color-primary: #4C8AF5; /* A shade of blue for primary actions and highlights */
+  --ifm-color-primary-dark: #376ECF;
+  --ifm-color-primary-darker: #3264BE;
+  --ifm-color-primary-darkest: #2A549D;
+  --ifm-color-primary-light: #619BF8;
+  --ifm-color-primary-lighter: #73A7FA;
+  --ifm-color-primary-lightest: #8BC0FF;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For dark mode */
+html[data-theme='dark'] {
+  --ifm-color-primary: #73A7FA;
+  --ifm-color-primary-dark: #619BF8;
+  --ifm-color-primary-darker: #548EEC;
+  --ifm-color-primary-darkest: #376ECF;
+  --ifm-color-primary-light: #8BC0FF;
+  --ifm-color-primary-lighter: #A4D1FF;
+  --ifm-color-primary-lightest: #C3E6FF;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom font for better readability */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Adjustments for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+/* General link styling */
+a {
+  color: var(--ifm-color-primary);
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Navbar adjustments */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  height: 2rem; /* Adjust logo size */
+  margin-right: 0.5rem;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #242526;
+  color: #fff;
+}
+
+.footer__title {
+  color: #fff;
+}
+
+.footer__link-item {
+  color: #fff;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}

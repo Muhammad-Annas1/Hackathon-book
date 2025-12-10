@@ -24,7 +24,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "D:\\Python\\hackathon-book\\docs\\sidebar.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics/tree/main/"
         },
         "blog": false,
         "theme": {
@@ -37,7 +37,7 @@ export default {
     "navbar": {
       "title": "Physical AI & Humanoid Robotics",
       "logo": {
-        "alt": "My Site Logo",
+        "alt": "Physical AI & Humanoid Robotics Logo",
         "src": "img/logo.svg"
       },
       "items": [
@@ -48,7 +48,7 @@ export default {
           "label": "Book"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics",
           "label": "GitHub",
           "position": "right"
         }
@@ -85,7 +85,7 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics"
             }
           ]
         }

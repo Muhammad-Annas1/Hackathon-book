@@ -7,7 +7,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'An open-source book on modern robotics',
-  favicon: 'img/favicon.ico', // I will create a placeholder for this later
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com', // Replace with final URL
@@ -36,7 +36,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics/tree/main/',
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
@@ -52,8 +52,8 @@ const config = {
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg', // I will create a placeholder for this later
+          alt: 'Physical AI & Humanoid Robotics Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
@@ -63,7 +63,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/facebook/docusaurus', // Replace with project repo
+            href: 'https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics', // Replace with project repo
             label: 'GitHub',
             position: 'right',
           },
@@ -99,7 +99,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus', // Replace with project repo
+                href: 'https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics', // Replace with project repo
               },
             ],
           },
