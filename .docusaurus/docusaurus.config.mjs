@@ -24,7 +24,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "D:\\Python\\hackathon-book\\docs\\sidebar.js",
-          "editUrl": "https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics/tree/main/"
+          "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book"
         },
         "blog": false,
         "theme": {
@@ -36,10 +36,6 @@ export default {
   "themeConfig": {
     "navbar": {
       "title": "Physical AI & Humanoid Robotics",
-      "logo": {
-        "alt": "Physical AI & Humanoid Robotics Logo",
-        "src": "img/logo.svg"
-      },
       "items": [
         {
           "type": "docSidebar",

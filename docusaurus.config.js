@@ -36,7 +36,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Robotics-Book/Physical-AI-Humanoid-Robotics/tree/main/',
+            'https://github.com/Muhammad-Annas1/Hackathon-book',
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
@@ -51,10 +51,7 @@ const config = {
     ({
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
-        logo: {
-          alt: 'Physical AI & Humanoid Robotics Logo',
-          src: 'img/logo.svg',
-        },
+        
         items: [
           {
             type: 'docSidebar',
