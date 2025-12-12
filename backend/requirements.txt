@@ -1,0 +1,6 @@
+uv
+cohere
+qdrant-client
+beautifulsoup4
+requests
+python-dotenv

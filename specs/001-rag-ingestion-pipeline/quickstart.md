@@ -5,7 +5,6 @@ This guide explains how to set up and run the RAG ingestion pipeline.
 ## 1. Prerequisites
 
 - Python 3.11 or higher
-- `uv` package manager installed
 - A Qdrant Cloud account and API key
 - A Cohere account and API key
 
@@ -20,16 +19,24 @@ This guide explains how to set up and run the RAG ingestion pipeline.
 2.  **Create a virtual environment**:
     ```bash
     python -m venv .venv
+    ```
+    Activate the virtual environment:
+    ```bash
+    # On Windows
+    .venv\Scripts\activate
+    # On macOS/Linux
     source .venv/bin/activate
     ```
 
-3.  **Install dependencies**:
+3.  **Install `uv` and project dependencies**:
     ```bash
-    uv pip install -r requirements.txt
+    python -m pip install uv
+    uv pip install -r backend/requirements.txt
     ```
+    (Note: If `uv` is already installed globally, you might just need `uv pip install -r backend/requirements.txt`)
 
 4.  **Set environment variables**:
-    Create a `.env` file in the `backend` directory with the following content:
+    Create a `.env` file in the **project root** directory with the following content:
     ```
     COHERE_API_KEY=<your-cohere-api-key>
     QDRANT_API_KEY=<your-qdrant-api-key>
@@ -38,14 +45,11 @@ This guide explains how to set up and run the RAG ingestion pipeline.
 
 ## 3. Running the script
 
-1.  **Navigate to the backend directory**:
-    ```bash
-    cd backend
-    ```
+1.  **Ensure virtual environment is activated** (see step 2).
 
-2.  **Run the script**:
+2.  **Run the script from the project root**:
     ```bash
-    python main.py
+    python -m backend.main
     ```
 
 The script will then:
@@ -53,5 +57,5 @@ The script will then:
 2.  Extract the text from each URL.
 3.  Chunk the text.
 4.  Generate embeddings for each chunk.
-5.  Create a new Qdrant collection.
+5.  Create a new Qdrant collection (or recreate if exists).
 6.  Save the chunks and their embeddings to the collection.
