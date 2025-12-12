@@ -3,11 +3,13 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from dotenv import load_dotenv
-import cohere # Import the cohere client
-from qdrant_client import QdrantClient, models # Import Qdrant client
-from qdrant_client.http.models import PointStruct # For PointStruct
+import cohere
+from qdrant_client import QdrantClient, models
+from qdrant_client.http.models import PointStruct
 import uuid
 import logging
+from typing import List
+import xml.etree.ElementTree as ElementTree # Import ElementTree for XML parsing
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -30,7 +32,7 @@ if not QDRANT_API_KEY or not QDRANT_URL:
 # Initialize Cohere client
 try:
     co = cohere.Client(COHERE_API_KEY)
-except cohere.CohereError as e:
+except Exception as e:
     logging.error(f"Failed to initialize Cohere client: {e}")
     exit(1)
 
@@ -43,6 +45,43 @@ try:
 except Exception as e:
     logging.error(f"Failed to initialize Qdrant client: {e}")
     exit(1)
+
+def get_urls_from_sitemap(sitemap_url: str) -> List[str]:
+    """
+    Fetches and parses a sitemap XML to extract URLs.
+    """
+    logging.info(f"Fetching URLs from sitemap: {sitemap_url}")
+    try:
+        response = requests.get(sitemap_url, timeout=10)
+        response.raise_for_status()
+        
+        root = ElementTree.fromstring(response.content)
+        
+        urls = []
+        # Check for <sitemapindex> for nested sitemaps
+        sitemap_namespace = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        for sitemap_elem in root.findall('s:sitemap', sitemap_namespace):
+            nested_sitemap_url = sitemap_elem.find('s:loc', sitemap_namespace).text
+            urls.extend(get_urls_from_sitemap(nested_sitemap_url)) # Recursively fetch nested sitemaps
+        
+        # Extract URLs from <urlset>
+        urlset_namespace = {'u': 'http://www.sitemaps.org/schemas/sitemap/0.9'} # Standard namespace for urlset
+        for url_elem in root.findall('u:url', urlset_namespace):
+            loc_elem = url_elem.find('u:loc', urlset_namespace)
+            if loc_elem is not None:
+                urls.append(loc_elem.text)
+        
+        logging.info(f"Found {len(urls)} URLs in sitemap {sitemap_url}")
+        return urls
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error fetching sitemap {sitemap_url}: {e}")
+        return []
+    except ElementTree.ParseError as e:
+        logging.error(f"Error parsing sitemap XML from {sitemap_url}: {e}")
+        return []
+    except Exception as e:
+        logging.error(f"An unexpected error occurred while processing sitemap {sitemap_url}: {e}")
+        return []
 
 def get_all_urls(base_url: str) -> list[str]:
     """
@@ -191,19 +230,44 @@ def save_chunk_to_qdrant(collection_name: str, chunks: list[str], embeddings: li
         logging.error(f"Failed to upsert points to Qdrant collection '{collection_name}': {e}")
         raise
 
+import uuid # Import uuid for generating unique IDs
+
 def main():
     logging.info("RAG Ingestion Pipeline started.")
     
-    base_url = "https://hackathon-book-cyan.vercel.app/"
+    sitemap_url = "https://hackathon-book-cyan.vercel.app/sitemap.xml" # Use the provided sitemap URL
+    target_site_base_url = "https://hackathon-book-cyan.vercel.app/" # The base URL for filtering
     collection_name = "rag_embedding"
     chunk_size = 512
     overlap = 64
 
     # 1. Content Extraction
-    urls = get_all_urls(base_url)
+    urls_from_sitemap = get_urls_from_sitemap(sitemap_url)
     
+    # Correcting URLs from sitemap to match the target_site_base_url's domain
+    corrected_urls = []
+    # This domain was observed in the sitemap content from previous runs
+    old_domain = "https://your-docusaurus-test-site.com" 
+    
+    for url in urls_from_sitemap:
+        if url.startswith(old_domain):
+            corrected_url = url.replace(old_domain, target_site_base_url.rstrip('/'))
+            corrected_urls.append(corrected_url)
+        else:
+            corrected_urls.append(url) # Keep original if domain doesn't match old_domain
+    
+    # Now, filter the corrected URLs
+    clean_target_base = target_site_base_url.rstrip('/')
+    filtered_urls = [url for url in corrected_urls if url.startswith(clean_target_base)]
+    
+    logging.info(f"Filtered {len(filtered_urls)} URLs belonging to the target site {target_site_base_url}.")
+
+    if not filtered_urls:
+        logging.error("No URLs found from sitemap matching the target site. Exiting.")
+        return
+
     all_extracted_content = []
-    for url in urls:
+    for url in filtered_urls:
         text = extract_text_from_url(url)
         if text:
             all_extracted_content.append({"url": url, "text": text})
@@ -220,6 +284,27 @@ def main():
 
     # 2. Embedding Generation and Qdrant Storage
     total_chunks_processed = 0
+
+    # Create collection once before processing all content items
+    # Determine vector_size from the first non-empty embedding
+    first_embedding_size = 0
+    for content_item in all_extracted_content:
+        chunks = chunk_text(content_item["text"], chunk_size=chunk_size, overlap=overlap)
+        embeddings = embed(chunks)
+        if embeddings:
+            first_embedding_size = len(embeddings[0])
+            break
+    
+    if first_embedding_size == 0:
+        logging.error("Could not determine vector size for Qdrant collection. Exiting.")
+        return
+    
+    try:
+        create_collection(collection_name, first_embedding_size)
+    except Exception as e:
+        logging.error(f"Pipeline stopped due to Qdrant collection error during initial creation: {e}")
+        return
+
     for content_item in all_extracted_content:
         text_to_chunk = content_item["text"]
         chunks = chunk_text(text_to_chunk, chunk_size=chunk_size, overlap=overlap)
@@ -233,13 +318,6 @@ def main():
                 logging.warning(f"No embeddings generated for {content_item['url'][:50]}..., skipping Qdrant save.")
                 continue
 
-            vector_size = len(embeddings[0]) 
-            try:
-                create_collection(collection_name, vector_size) # Create/recreate once
-            except Exception as e:
-                logging.error(f"Pipeline stopped due to Qdrant collection error: {e}")
-                return # Exit if collection creation fails
-            
             metadata_list = []
             for i, chunk in enumerate(chunks):
                 metadata = {
