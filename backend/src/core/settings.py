@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     """
     Application settings loaded from .env file.
     """
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding='utf-8', extra='ignore')
+    model_config = SettingsConfigDict(env_file="../.env", env_file_encoding='utf-8', extra='ignore')
 
     # API Keys
     OPENAI_API_KEY: Optional[str] = None
