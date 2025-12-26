@@ -1,12 +1,20 @@
-# Chapter 4: Simple Humanoid Joint Control Project
+---
+title: "Chapter 4: Project - Simple Humanoid Joint Control"
+sidebar_position: 4
+---
 
-This project brings together all the concepts from the previous chapters to create a simple joint control project for our humanoid robot.
+This project brings together all the concepts from the previous chapters to create a functional joint control pipeline for our humanoid robot.
 
-We will use the `simple_humanoid.urdf` file we created, a Python script to publish joint states, and a launch file to bring everything up in RViz.
+We will use:
+1. The **URDF** from Chapter 3.
+2. A **Python script** to publish oscillating joint positions.
+3. A **Launch file** to bring up both the publishers and RViz.
+
+---
 
 ## The Joint State Publisher
 
-This node will publish messages to the `/joint_states` topic. The `robot_state_publisher` will listen to this topic and update the robot's pose in the simulation.
+This node publishes messages to the `/joint_states` topic. The standard `robot_state_publisher` node listens to this topic to calculate the 3D poses of all links.
 
 ```python
 import rclpy
@@ -45,7 +53,7 @@ if __name__ == '__main__':
 
 ## The Launch File
 
-This launch file will start the `robot_state_publisher`, our `joint_state_publisher`, and RViz.
+Using a launch file avoids running multiple terminals for different nodes. It automatically starts everything required for visualization.
 
 ```python
 from launch import LaunchDescription
@@ -54,7 +62,7 @@ from ament_index_python.packages import get_package_share_directory
 import os
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory('my_robot_pkg') # assuming a package name
+    pkg_share = get_package_share_directory('humanoid_robot_pkg') 
     urdf_file = os.path.join(pkg_share, 'urdf', 'simple_humanoid.urdf')
 
     return LaunchDescription([
@@ -65,7 +73,7 @@ def generate_launch_description():
             output='screen',
             arguments=[urdf_file]),
         Node(
-            package='my_robot_pkg', # assuming a package name
+            package='humanoid_robot_pkg', 
             executable='joint_state_publisher',
             name='joint_state_publisher'),
         Node(
@@ -78,8 +86,8 @@ def generate_launch_description():
 
 ## Running the Project
 
-To run the project, you would build your ROS 2 package and then use the `ros2 launch` command:
+To execute the project, build your workspace and run:
 
 ```bash
-ros2 launch my_robot_pkg humanoid_control_launch.py
+ros2 launch humanoid_robot_pkg humanoid_control_launch.py
 ```

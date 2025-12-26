@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-1/chapter-2-rclpy-control.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Chapter 2: Controlling Robots with rclpy",
+    "sidebar_position": 2
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 1: Core ROS 2 Concepts",

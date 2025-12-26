@@ -1,7 +1,7 @@
 {
   "id": "module-3-isaac/chapter-3-nav2-humanoid-planning",
   "title": "Chapter 3: Nav2 Path Planning for Humanoids",
-  "description": "3.1 Introduction to Nav2",
+  "description": "Autonomous navigation is a core requirement for humanoid robots. While traditional robots use wheels, humanoids require a more complex approach to planning that accounts for stability and stepping.",
   "source": "@site/docs/module-3-isaac/chapter-3-nav2-humanoid-planning.md",
   "sourceDirName": "module-3-isaac",
   "slug": "/module-3-isaac/chapter-3-nav2-humanoid-planning",
@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-3-isaac/chapter-3-nav2-humanoid-planning.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Chapter 3: Nav2 Path Planning for Humanoids",
+    "sidebar_position": 3
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 2: Isaac ROS VSLAM + Perception",

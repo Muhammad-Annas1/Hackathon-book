@@ -42,6 +42,13 @@
       "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
+  "/chatbot-522": {
+    "__comp": "__comp---site-src-pages-chatbot-jsb-34-5a2",
+    "__context": {
+      "plugin": "plugin---chatbota-74-26c"
+    },
+    "config": "config---chatbot-5-e-9-77b"
+  },
   "/docs-19e": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
@@ -118,8 +125,8 @@
   "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
-      "plugin": "plugin---a-74-9d6"
+      "plugin": "plugin---chatbota-74-26c"
     },
-    "config": "config---5-e-9-4f3"
+    "config": "config---chatbot-5-e-9-77b"
   }
 }

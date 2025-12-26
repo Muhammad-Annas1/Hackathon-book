@@ -1,10 +1,24 @@
-# Chapter 2: Controlling Robots with rclpy
+---
+title: "Chapter 2: Controlling Robots with rclpy"
+sidebar_position: 2
+---
 
-`rclpy` is the official Python client library for ROS 2. It allows you to write ROS 2 nodes in Python and interact with the entire ROS 2 graph.
+`rclpy` is the official Python client library for ROS 2. It allows you to write ROS 2 nodes in Python and interact with the entire ROS 2 graph. 
+
+## Understanding the Node Lifecycle
+
+When writing an `rclpy` node, you typically:
+1. Initialize `rclpy`.
+2. Create your node class (inheriting from `rclpy.node.Node`).
+3. Add publishers, subscribers, timers, or services in the constructor.
+4. "Spin" the node to keep it alive and processing callbacks.
+5. Cleanup and shutdown.
+
+---
 
 ## A Simple Publisher
 
-Here is an example of a simple publisher node that publishes a "Hello World" message to the `chatter` topic every half a second.
+Here is an example of a simple publisher node. It sends a string message to the `chatter` topic every 500ms.
 
 ```python
 import rclpy
@@ -40,7 +54,7 @@ if __name__ == '__main__':
 
 ## A Simple Subscriber
 
-Here is the corresponding subscriber node, which listens to the `chatter` topic and prints the messages it receives.
+The subscriber node listens for those messages and logs them.
 
 ```python
 import rclpy

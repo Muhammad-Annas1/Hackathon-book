@@ -1,7 +1,7 @@
 {
   "id": "module-2/chapter-2-unity-digital-twin",
   "title": "Chapter 2: Building a Unity Digital Twin",
-  "description": "Unity is a powerful cross-platform game engine that can be used to create high-fidelity digital twins for robotics. A digital twin in Unity allows for realistic rendering, complex animations, and interactive human-robot experiences.",
+  "description": "While Gazebo is great for physics, Unity is the industry standard for high-fidelity visualization and human-robot interaction (HRI). A digital twin in Unity allows for realistic rendering and interactive experiences.",
   "source": "@site/docs/module-2/chapter-2-unity-digital-twin.md",
   "sourceDirName": "module-2",
   "slug": "/module-2/chapter-2-unity-digital-twin",
@@ -11,14 +11,18 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-2/chapter-2-unity-digital-twin.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Chapter 2: Building a Unity Digital Twin",
+    "sidebar_position": 2
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 1: Gazebo Physics",
     "permalink": "/docs/module-2/chapter-1-gazebo-physics"
   },
   "next": {
-    "title": "Chapter 3: Sensor Simulation",
+    "title": "Chapter 3: Sensor Simulation in Gazebo & Unity",
     "permalink": "/docs/module-2/chapter-3-sensor-simulation"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "module-4-vla/chapter-3-capstone-overview",
-  "title": "Chapter 3: Capstone Overview",
-  "description": "This chapter provides a high-level overview of how the concepts from the previous chapters—voice-to-action and cognitive planning—come together in a complete, autonomous humanoid robotics workflow. This is the \"capstone\" view that illustrates the full end-to-end system.",
+  "title": "Chapter 3: Capstone - The VLA Workflow",
+  "description": "This chapter illustrates the full end-to-end system, where perception, reasoning, and action come together.",
   "source": "@site/docs/module-4-vla/chapter-3-capstone-overview.md",
   "sourceDirName": "module-4-vla",
   "slug": "/module-4-vla/chapter-3-capstone-overview",
@@ -11,12 +11,14 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-4-vla/chapter-3-capstone-overview.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 3,
   "frontMatter": {
-    "title": "Chapter 3: Capstone Overview"
+    "title": "Chapter 3: Capstone - The VLA Workflow",
+    "sidebar_position": 3
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter 2: Cognitive Planning",
+    "title": "Chapter 2: Cognitive Planning with LLMs",
     "permalink": "/docs/module-4-vla/chapter-2-cognitive-planning"
   }
 }

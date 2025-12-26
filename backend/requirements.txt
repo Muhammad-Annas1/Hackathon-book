@@ -1,6 +1,12 @@
-uv
-cohere
+fastapi
+uvicorn
+openai
 qdrant-client
+sentence-transformers
+torch
+asyncpg
+python-dotenv
 beautifulsoup4
 requests
-python-dotenv
+pydantic-settings
+google-generativeai

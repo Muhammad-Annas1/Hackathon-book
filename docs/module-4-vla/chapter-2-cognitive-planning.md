@@ -1,95 +1,47 @@
 ---
-title: "Chapter 2: Cognitive Planning"
+title: "Chapter 2: Cognitive Planning with LLMs"
+sidebar_position: 2
 ---
 
-Cognitive planning is the "brain" of the autonomous robot. It involves taking a high-level, often abstract, goal and breaking it down into a concrete sequence of actions that the robot can execute. Large Language Models (LLMs) have emerged as a powerful tool for this task.
+Cognitive planning is the "brain" of an autonomous robot. It involves taking a high-level, often abstract, goal and breaking it down into a concrete sequence of actions.
 
 ## LLMs for High-Level Planning
 
-By leveraging their vast knowledge and reasoning capabilities, LLMs can act as a "common-sense" planner. Given a goal and a description of the robot's available actions, an LLM can generate a plausible sequence of steps to achieve that goal.
+By leveraging their vast knowledge and reasoning capabilities, Large Language Models (LLMs) can act as a "common-sense" planner. Given a goal and a description of the robot's available actions, an LLM can generate a plausible sequence of steps.
 
-The process typically looks like this:
+### The Planning Loop
+1.  **Prompting**: The goal, the robot's state, and available primitive actions are sent to the LLM.
+2.  **Inference**: The LLM reasons about the task (e.g., "To get a soda, I first need to be in the kitchen").
+3.  **Output Parsing**: The model's response is converted into a machine-readable format like JSON.
+4.  **Execution**: The robot's control system executes the sequence.
 
-1.  **Prompt Engineering**: A carefully crafted prompt is sent to the LLM. This prompt includes:
-    *   The high-level goal (e.g., "Get me a can of soda from the kitchen").
-    *   A description of the robot's current state and environment.
-    *   A list of the robot's primitive actions (e.g., `navigate_to(location)`, `find_object(object_name)`, `pick_up(object)`, `open(door)`).
-2.  **LLM Inference**: The LLM processes the prompt and generates a response.
-3.  **Output Parsing**: The LLM's response, which is typically a natural language text or a structured format like JSON, is parsed into a machine-readable list of actions.
-4.  **Execution**: The robot's control system executes the actions in the sequence, one by one.
+---
 
 ### Example: "Get a drink" Task
 
-Here is an example of how an LLM can be prompted to generate a plan.
-
-**System Prompt**:
+**System Prompt (Simplifed)**:
 ```text
-You are a helpful robot assistant. Your task is to take a high-level user command and break it down into a sequence of simple, executable actions.
-
-Available actions:
-- navigate_to(location)  // locations: kitchen, living_room, bedroom
+You are a humanoid robot. Available actions:
+- navigate_to(location)
 - find_object(object_name)
 - pick_up(object)
-- place(object, location)
-- open(object) // e.g., open(refrigerator)
-- close(object) // e.g., close(refrigerator)
-
-Return your plan as a JSON array of action objects.
+- open(object)
+Return a JSON array of actions.
 ```
 
-**User Prompt**:
-```text
-"Please get me a can of soda from the kitchen."
-```
+**User Goal**:
+> "Please get me a can of soda from the kitchen."
 
-**LLM-Generated Action Sequence (Output)**:
+**LLM-Generated Plan**:
 
 ```json
 [
-  {
-    "action": "navigate_to",
-    "parameters": {
-      "location": "kitchen"
-    }
-  },
-  {
-    "action": "open",
-    "parameters": {
-      "object": "refrigerator"
-    }
-  },
-  {
-    "action": "find_object",
-    "parameters": {
-      "object_name": "soda_can"
-    }
-  },
-  {
-    "action": "pick_up",
-    "parameters": {
-      "object": "soda_can"
-    }
-  },
-  {
-    "action": "close",
-    "parameters": {
-      "object": "refrigerator"
-    }
-  },
-  {
-    "action": "navigate_to",
-    "parameters": {
-      "location": "user_location"
-    }
-  },
-  {
-    "action": "place",
-    "parameters": {
-      "object": "soda_can",
-      "location": "user_table"
-    }
-  }
+  { "action": "navigate_to", "params": { "location": "kitchen" } },
+  { "action": "open", "params": { "object": "fridge" } },
+  { "action": "find_object", "params": { "name": "soda_can" } },
+  { "action": "pick_up", "params": { "object": "soda_can" } }
 ]
 ```
 
-This structured output can then be directly interpreted and executed by the robot's control system.
+## Moving Beyond Fixed Plans
+Modern cognitive planning also involves **Dynamic Re-planning**. If the robot finds the fridge is empty, it should be able to report back to the user or look for a soda in another location without needing a new manual command.

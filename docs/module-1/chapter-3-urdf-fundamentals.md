@@ -1,6 +1,16 @@
-# Chapter 3: URDF Fundamentals
+---
+title: "Chapter 3: URDF Fundamentals"
+sidebar_position: 3
+---
 
 The Unified Robot Description Format (URDF) is an XML format used in ROS to describe all elements of a robot model. This includes the robot's links, joints, sensors, and their physical properties.
+
+## Anatomoy of a URDF
+- **Links**: Represent physical parts of the robot (torso, arm, wheel).
+- **Joints**: Connect links and define how they move relative to each other (fixed, revolute, continuous).
+- **Visual/Collision/Inertial**: Define how the robot looks, hits things, and its weight distribution.
+
+---
 
 ## A Simple Humanoid URDF
 
@@ -53,6 +63,13 @@ Here is an example of a simple URDF for a humanoid robot with a torso, head, and
 
 ## Visualizing in RViz
 
-RViz is a powerful 3D visualization tool for ROS. You can use it to display your URDF model. You will need the `robot_state_publisher` package, which reads the URDF and publishes the state of the robot to the `/robot_description` topic.
+To see your robot in 3D, use RViz. A quick way to test a URDF without a complex launch file is using the `urdf_tutorial` package tools (if installed) or manually running the state publishers.
 
-You can create a launch file to start RViz and `robot_state_publisher` at the same time.
+### Quick Test Command
+If you have your URDF in a file named `robot.urdf`, you can visualize it using a specialized GUI tool:
+
+```bash
+ros2 run joint_state_publisher_gui joint_state_publisher_gui robot.urdf
+```
+
+This will open a window with sliders to move the joints and another window (RViz) to see the robot move in real-time.

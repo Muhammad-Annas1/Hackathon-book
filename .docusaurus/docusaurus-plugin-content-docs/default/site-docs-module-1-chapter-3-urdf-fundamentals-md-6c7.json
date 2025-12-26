@@ -11,14 +11,18 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-1/chapter-3-urdf-fundamentals.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Chapter 3: URDF Fundamentals",
+    "sidebar_position": 3
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 2: Controlling Robots with rclpy",
     "permalink": "/docs/module-1/chapter-2-rclpy-control"
   },
   "next": {
-    "title": "Chapter 4: Simple Humanoid Joint Control Project",
+    "title": "Chapter 4: Project - Simple Humanoid Joint Control",
     "permalink": "/docs/module-1/chapter-4-joint-control-project"
   }
 }

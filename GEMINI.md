@@ -1,4 +1,4 @@
-﻿# Gemini CLI Rules
+# Gemini CLI Rules
 
 This file is generated during init for the selected agent.
 
@@ -21,7 +21,7 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
   - Constitution → `history/prompts/constitution/`
   - Feature-specific → `history/prompts/<feature-name>/`
   - General → `history/prompts/general/`
-- ADR suggestions: when an architecturally significant decision is detected, suggest: "📋 Architectural decision detected: <brief>. Document? Run `/sp.adr <title>`." Never auto‑create ADRs; require user consent.
+- ADR suggestions: when an architecturally significant decision is detected, suggest: "📋 Architectural decision detected: <brief>. Document? Run `/sp.adr <title>`." Never auto‑create a ADRs; require user consent.
 
 ## Development Guidelines
 
@@ -207,4 +207,31 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 - `.specify/` — SpecKit Plus templates and scripts
 
 ## Code Standards
-See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+See `.specify/memory/constitution.md` for code quality, a testing, performance, security, and architecture principles.
+
+---
+# Development Guidelines
+Auto-generated from all feature plans. Last updated: 2025-12-15
+
+## Active Technologies
+- Python 3.11 + FastAPI, Qdrant-client, httpx (for OpenRouter), google-generativeai, uv (001-rag-chatbot-integration)
+- Qdrant Cloud (Vector DB) (001-rag-chatbot-integration)
+
+## Project Structure
+```text
+backend/
+frontend/
+tests/
+```
+
+## Commands
+`cd backend; pytest; ruff check .`
+
+## Code Style
+`Python: Follow standard conventions`
+
+## Recent Changes
+- 001-rag-chatbot-integration: Added Python 3.11 + FastAPI, Qdrant-client, httpx (for OpenRouter), google-generativeai, uv
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->

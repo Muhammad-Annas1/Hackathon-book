@@ -1,7 +1,7 @@
 {
   "id": "module-2/chapter-1-gazebo-physics",
   "title": "Chapter 1: Gazebo Physics",
-  "description": "This chapter covers the fundamental concepts of physics simulation within Gazebo.",
+  "description": "Gazebo is the classic simulator for ROS. It provides a robust physics engine and a rich set of plugins to simulate everything from simple sensors to complex humanoid dynamics.",
   "source": "@site/docs/module-2/chapter-1-gazebo-physics.md",
   "sourceDirName": "module-2",
   "slug": "/module-2/chapter-1-gazebo-physics",
@@ -11,10 +11,14 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-2/chapter-1-gazebo-physics.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Chapter 1: Gazebo Physics",
+    "sidebar_position": 1
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter 4: Simple Humanoid Joint Control Project",
+    "title": "Chapter 4: Project - Simple Humanoid Joint Control",
     "permalink": "/docs/module-1/chapter-4-joint-control-project"
   },
   "next": {

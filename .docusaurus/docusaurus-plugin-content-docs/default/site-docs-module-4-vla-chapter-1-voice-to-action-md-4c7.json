@@ -1,7 +1,7 @@
 {
   "id": "module-4-vla/chapter-1-voice-to-action",
   "title": "Chapter 1: Voice-to-Action",
-  "description": "This chapter explores the fundamental concepts behind converting a spoken command into a robotic action. This voice-to-action pipeline is a cornerstone of modern human-robot interaction, enabling intuitive control of complex systems.",
+  "description": "This chapter explores the fundamental concepts behind converting a spoken command into a robotic action. This voice-to-action pipeline is a cornerstone of modern human-robot interaction (HRI).",
   "source": "@site/docs/module-4-vla/chapter-1-voice-to-action.md",
   "sourceDirName": "module-4-vla",
   "slug": "/module-4-vla/chapter-1-voice-to-action",
@@ -11,8 +11,10 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-4-vla/chapter-1-voice-to-action.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 1,
   "frontMatter": {
-    "title": "Chapter 1: Voice-to-Action"
+    "title": "Chapter 1: Voice-to-Action",
+    "sidebar_position": 1
   },
   "sidebar": "tutorialSidebar",
   "previous": {

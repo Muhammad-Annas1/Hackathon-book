@@ -1,7 +1,7 @@
 {
   "id": "module-3-isaac/chapter-1-isaac-sim-fundamentals",
   "title": "Chapter 1: Isaac Sim Fundamentals",
-  "description": "1.1 Introduction to Isaac Sim",
+  "description": "NVIDIA Isaac Sim is a powerful robotics simulation platform built on NVIDIA Omniverse. It provides a photorealistic environment and highly accurate physics for developing and testing robots.",
   "source": "@site/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals.md",
   "sourceDirName": "module-3-isaac",
   "slug": "/module-3-isaac/chapter-1-isaac-sim-fundamentals",
@@ -11,10 +11,14 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-3-isaac/chapter-1-isaac-sim-fundamentals.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Chapter 1: Isaac Sim Fundamentals",
+    "sidebar_position": 1
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter 3: Sensor Simulation",
+    "title": "Chapter 3: Sensor Simulation in Gazebo & Unity",
     "permalink": "/docs/module-2/chapter-3-sensor-simulation"
   },
   "next": {

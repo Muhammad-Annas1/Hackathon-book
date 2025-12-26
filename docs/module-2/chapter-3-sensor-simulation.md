@@ -1,25 +1,59 @@
-# Chapter 3: Sensor Simulation
+---
+title: "Chapter 3: Sensor Simulation in Gazebo & Unity"
+sidebar_position: 3
+---
 
-Simulating robot sensors is crucial for developing and testing perception and control algorithms without the need for expensive physical hardware. This chapter covers the principles behind simulating common sensors like LiDAR, Depth Cameras, and IMUs.
+Sensors are the eyes and ears of a robot. Both Gazebo and Unity provide mechanisms to simulate realistic sensor data and stream it into ROS 2.
 
-## LiDAR (Light Detection and Ranging) Simulation
+## Sensor Types in Simulation
 
-LiDAR sensors measure distances by illuminating a target with pulsed laser light and measuring the reflected pulses with a sensor. In simulation, this involves:
+Common sensors simulated for humanoid robots include:
+-   **RGB Cameras**: For visual perception and color detection.
+-   **Depth Cameras**: For 3D scene reconstruction and obstacle avoidance.
+-   **LiDAR (Light Detection and Ranging)**: For high-precision distance measurements.
+-   **IMU (Inertial Measurement Unit)**: For tracking acceleration and angular velocity.
 
--   **Ray Casting**: Simulating laser beams as rays cast into the environment.
--   **Collision Detection**: Detecting intersections with simulated objects.
--   **Distance Measurement**: Calculating the distance to the first intersection point.
--   **Noise Model**: Adding realistic noise to the distance measurements to mimic real-world sensor imperfections.
+---
 
-Simulated LiDAR data is often represented as a point cloud.
+## Simulating Sensors in Gazebo
 
-## Depth Camera Simulation
+Gazebo uses **plugins** to bridge simulation data to ROS topics. For example, to add an RGB camera, you add a `<sensor>` tag to your URDF/SDF with a `libgazebo_ros_camera.so` plugin.
 
-Depth cameras (e.g., RGB-D cameras) provide both a color image and a depth map, where each pixel indicates the distance from the camera to the object at that point. Simulation typically involves:
+### Example: Camera Plugin (URDF)
+```xml
+<sensor name="camera" type="camera">
+  <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+    <ros>
+      <namespace>/robot</namespace>
+      <remapping>image_raw:=camera/image_raw</remapping>
+    </ros>
+    <camera_name>upper_camera</camera_name>
+    <frame_name>camera_link</frame_name>
+  </plugin>
+</sensor>
+```
 
--   **Rendering a Depth Buffer**: The GPU renders a depth map of the scene from the camera's perspective.
--   **Color Image Generation**: A standard color image is rendered.
--   **Sensor Noise**: Adding noise characteristics specific to depth cameras (e.g., structured light patterns, time-of-flight errors).
+---
+
+## Simulating Sensors in Unity
+
+In Unity, sensor simulation is typically handled by specialized scripts or packages like the **Unity Robotics Hub** examples.
+
+-   **RGB Cameras**: Use a standard Camera component and a script to convert the `RenderTexture` to a ROS `Image` message.
+-   **LiDAR**: Can be simulated using Raycasting in C# to measure distances and pack them into a `LaserScan` message.
+
+---
+
+## Visualizing Sensor Data in RViz
+
+Regardless of which simulator you use, the gold standard for verifying sensor data in ROS 2 is **RViz**.
+
+1.  **Add a Display**: Use the "Add" button to add a "Camera" or "PointCloud2" display.
+2.  **Select Topic**: Choose the topic published by the simulator (e.g., `/camera/image_raw`).
+3.  **Global Frame**: Ensure the "Fixed Frame" matches the frame of your sensor.
+
+## Summary
+Simulating sensors is the first step toward building autonomous robots. In the next module, we will explore how to use this data for advanced perception with NVIDIA Isaac.
 
 ## IMU (Inertial Measurement Unit) Simulation
 
@@ -35,7 +69,6 @@ In simulation, IMU data is derived directly from the simulated robot's rigid bod
 -   **Adding Noise and Bias**: Introducing realistic noise, bias, and drift to the ideal measurements.
 
 Simulated IMU data is essential for testing state estimation and control algorithms.
-
 ## Visualizing Sensor Data and Pipelines
 
 After simulating sensor data, the next step is typically to visualize and process it within a perception pipeline.

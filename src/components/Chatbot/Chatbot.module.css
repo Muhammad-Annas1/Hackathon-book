@@ -1,0 +1,89 @@
+.chatbotContainer {
+    display: flex;
+    flex-direction: column;
+    height: 600px; /* Or adjust as needed */
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+.messagesContainer {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #8e67e8; /* Docusaurus primary-like color */
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.bot {
+    align-self: flex-start;
+    background-color: #e0e0e0;
+    color: #333;
+    border-bottom-left-radius: 5px;
+}
+
+.inputContainer {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.inputField {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #8e67e8;
+}
+
+.sendButton {
+    background-color: #8e67e8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.sendButton:hover {
+    background-color: #7b59d2;
+    transform: translateY(-1px);
+}
+
+.sendButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

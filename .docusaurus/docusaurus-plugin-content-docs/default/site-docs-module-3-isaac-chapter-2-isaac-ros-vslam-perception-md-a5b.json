@@ -1,7 +1,7 @@
 {
   "id": "module-3-isaac/chapter-2-isaac-ros-vslam-perception",
   "title": "Chapter 2: Isaac ROS VSLAM + Perception",
-  "description": "2.1 Introduction to Isaac ROS",
+  "description": "NVIDIA Isaac ROS is a collection of hardware-accelerated packages that allow ROS 2 developers to leverage the full power of NVIDIA GPUs for perception and navigation.",
   "source": "@site/docs/module-3-isaac/chapter-2-isaac-ros-vslam-perception.md",
   "sourceDirName": "module-3-isaac",
   "slug": "/module-3-isaac/chapter-2-isaac-ros-vslam-perception",
@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-3-isaac/chapter-2-isaac-ros-vslam-perception.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Chapter 2: Isaac ROS VSLAM + Perception",
+    "sidebar_position": 2
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 1: Isaac Sim Fundamentals",

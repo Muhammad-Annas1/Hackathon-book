@@ -1,7 +1,7 @@
 {
   "id": "module-3-isaac/chapter-4-isaac-sim-ros-workflow",
   "title": "Chapter 4: Isaac Sim → Isaac ROS Workflow",
-  "description": "4.1 Introduction to Isaac Sim and Isaac ROS Integration",
+  "description": "The true power of this stack lies in the seamless transition from simulation to real-world algorithms. This chapter explores the \"Sim-to-Algorithm\" pipeline.",
   "source": "@site/docs/module-3-isaac/chapter-4-isaac-sim-ros-workflow.md",
   "sourceDirName": "module-3-isaac",
   "slug": "/module-3-isaac/chapter-4-isaac-sim-ros-workflow",
@@ -11,5 +11,9 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-3-isaac/chapter-4-isaac-sim-ros-workflow.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {}
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Chapter 4: Isaac Sim → Isaac ROS Workflow",
+    "sidebar_position": 4
+  }
 }

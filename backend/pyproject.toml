@@ -1,0 +1,21 @@
+[project]
+name = "rag_chatbot_backend"
+version = "0.1.0"
+description = "Backend for the RAG chatbot."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "pydantic",
+    "pydantic-settings",
+    "qdrant-client",
+    "httpx",
+    "google-generativeai",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "ruff",
+]

@@ -1,7 +1,7 @@
 {
   "id": "module-1/chapter-4-joint-control-project",
-  "title": "Chapter 4: Simple Humanoid Joint Control Project",
-  "description": "This project brings together all the concepts from the previous chapters to create a simple joint control project for our humanoid robot.",
+  "title": "Chapter 4: Project - Simple Humanoid Joint Control",
+  "description": "This project brings together all the concepts from the previous chapters to create a functional joint control pipeline for our humanoid robot.",
   "source": "@site/docs/module-1/chapter-4-joint-control-project.md",
   "sourceDirName": "module-1",
   "slug": "/module-1/chapter-4-joint-control-project",
@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-1/chapter-4-joint-control-project.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Chapter 4: Project - Simple Humanoid Joint Control",
+    "sidebar_position": 4
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 3: URDF Fundamentals",

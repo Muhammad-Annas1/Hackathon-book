@@ -1,7 +1,7 @@
 {
   "id": "module-2/chapter-3-sensor-simulation",
-  "title": "Chapter 3: Sensor Simulation",
-  "description": "Simulating robot sensors is crucial for developing and testing perception and control algorithms without the need for expensive physical hardware. This chapter covers the principles behind simulating common sensors like LiDAR, Depth Cameras, and IMUs.",
+  "title": "Chapter 3: Sensor Simulation in Gazebo & Unity",
+  "description": "Sensors are the eyes and ears of a robot. Both Gazebo and Unity provide mechanisms to simulate realistic sensor data and stream it into ROS 2.",
   "source": "@site/docs/module-2/chapter-3-sensor-simulation.md",
   "sourceDirName": "module-2",
   "slug": "/module-2/chapter-3-sensor-simulation",
@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-2/chapter-3-sensor-simulation.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Chapter 3: Sensor Simulation in Gazebo & Unity",
+    "sidebar_position": 3
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 2: Building a Unity Digital Twin",

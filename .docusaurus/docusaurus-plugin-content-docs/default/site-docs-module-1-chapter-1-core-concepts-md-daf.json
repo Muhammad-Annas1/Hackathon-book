@@ -1,7 +1,7 @@
 {
   "id": "module-1/chapter-1-core-concepts",
   "title": "Chapter 1: Core ROS 2 Concepts",
-  "description": "This chapter covers the fundamental concepts of the Robot Operating System (ROS) 2.",
+  "description": "This chapter covers the fundamental concepts of the Robot Operating System (ROS) 2, the backbone of modern humanoid robotics.",
   "source": "@site/docs/module-1/chapter-1-core-concepts.md",
   "sourceDirName": "module-1",
   "slug": "/module-1/chapter-1-core-concepts",
@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-1/chapter-1-core-concepts.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Chapter 1: Core ROS 2 Concepts",
+    "sidebar_position": 1
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Introduction",

@@ -1,7 +1,7 @@
 {
   "id": "module-4-vla/chapter-2-cognitive-planning",
-  "title": "Chapter 2: Cognitive Planning",
-  "description": "Cognitive planning is the \"brain\" of the autonomous robot. It involves taking a high-level, often abstract, goal and breaking it down into a concrete sequence of actions that the robot can execute. Large Language Models (LLMs) have emerged as a powerful tool for this task.",
+  "title": "Chapter 2: Cognitive Planning with LLMs",
+  "description": "Cognitive planning is the \"brain\" of an autonomous robot. It involves taking a high-level, often abstract, goal and breaking it down into a concrete sequence of actions.",
   "source": "@site/docs/module-4-vla/chapter-2-cognitive-planning.md",
   "sourceDirName": "module-4-vla",
   "slug": "/module-4-vla/chapter-2-cognitive-planning",
@@ -11,8 +11,10 @@
   "editUrl": "https://github.com/Muhammad-Annas1/Hackathon-book/docs/module-4-vla/chapter-2-cognitive-planning.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 2,
   "frontMatter": {
-    "title": "Chapter 2: Cognitive Planning"
+    "title": "Chapter 2: Cognitive Planning with LLMs",
+    "sidebar_position": 2
   },
   "sidebar": "tutorialSidebar",
   "previous": {
@@ -20,7 +22,7 @@
     "permalink": "/docs/module-4-vla/chapter-1-voice-to-action"
   },
   "next": {
-    "title": "Chapter 3: Capstone Overview",
+    "title": "Chapter 3: Capstone - The VLA Workflow",
     "permalink": "/docs/module-4-vla/chapter-3-capstone-overview"
   }
 }
