@@ -1,0 +1,54 @@
+.env
+backend/.env
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Project-specific
+.tmp/
+.gemini/
+
+# Node.js / Docusaurus
+node_modules/
+dist/
+build/
+*.log
+
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# Unity
+Library/
+Temp/
+Obj/
+Logs/
+*.csproj
+*.unityproj
+*.sln
+Assets/AssetStoreTools/
+
+# Gazebo (ROS 2 related)
+install/
+log/
+generated/
+
+# C++
+build/
+bin/
+obj/
+out/
+*.o
+*.so
+*.a
+*.exe
+*.dll
